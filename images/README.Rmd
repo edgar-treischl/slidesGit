@@ -1,0 +1,74 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+
+# AmtSchulGit <img src="man/figures/logo.png" align="right" width="225"/>
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of AmtSchulGit is make the first steps to work with Git easier.
+
+## Installation
+
+You can install the development version of AmtSchulGit like so:
+
+``` r
+# install_local from installs the package and its dependencies
+remotes::install_local("path_to_file.gz",
+                       dependencies = TRUE)
+```
+
+## Example
+
+*Create* a new Git repro und *clone* it to a local repository via `createRepro()`. The functions asks you to provide a name for the folder and it opens and window to select the path of the local repository. It calls the `createRemoteGitRepo()` and the `cloneEmptyRepo()` for this purpose.
+
+```{r, eval=FALSE}
+library(AmtSchulGit)
+createRepro()
+```
+
+
+The `createRemoteGitRepo()` function creates a new repro on the Git server. It adds the text string `proj_asd_` and the current date to folder name automatically.
+
+```{r, eval=FALSE}
+#Create Git repro only
+createRemoteGitRepo("name")
+```
+The `cloneEmptyRepo()` functions clones this repository, it opens a selection window to choose a path where the local repository will be cloned. Next, the functions creates an RStudio project and it adds the typical folder structure (as default).
+
+```{r, eval=FALSE}
+#Clone Git repro on the local machine
+cloneEmptyRepo()
+> createRepro()
+ℹ Bitte Projektname angeben und lokalen Pfad selektieren:
+Name: Test
+✔ Created 'proj_asd_240712_Test' here: '//10.196.49.13/GIT$/proj_asd_240712_Test/prog'.
+ℹ Bitte nun den lokalen Pfad auswaehlen:
+Cloning into 'C:/Users/las-tre-edg/Documents/Git/proj_asd_240712_Test'...
+warning: You appear to have cloned an empty repository.
+done.
+✔ Folder 'res' created.
+✔ Folder 'doc' created.
+✔ Folder 'log' created.
+✔ Folder 'orig' created.
+✔ Folder 'prog' created.
+✔ Setting active project to 'C:/Users/las-tre-edg/Documents/Git/proj_asd_240712_Test'
+✔ Creating 'R/'
+✔ Writing 'proj_asd_240712_Test.Rproj'
+✔ Adding '.Rproj.user' to '.gitignore'
+✔ Setting active project to '<no active project>'
+✔ Created and cloned Git repository.
+```
