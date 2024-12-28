@@ -62,7 +62,7 @@ xaringanExtra::style_search(match_background = "black",
 
 
 xaringanExtra::use_panelset()
-
+xaringanExtra::use_clipboard()
 ```
 
 
