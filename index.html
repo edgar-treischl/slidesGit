@@ -5,6 +5,19 @@
     <meta charset="utf-8" />
     <meta name="author" content="Dr. Edgar Treischl" />
     <script src="libs/header-attrs/header-attrs.js"></script>
+    <meta name="description" content="A gentle introduction to Git and GitHub."/>
+    <meta name="generator" content="xaringan and remark.js"/>
+    <meta name="github-repo" content="edgar-treischl/Workshop_GitHubIntro"/>
+    <meta name="twitter:title" content="Introduction to Git and GitHub"/>
+    <meta name="twitter:description" content="A gentle introduction to Git and GitHub."/>
+    <meta name="twitter:url" content="https://edgar-treischl.github.io/Workshop_GitHubIntro/"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta property="og:title" content="Introduction to Git and GitHub"/>
+    <meta property="og:description" content="A gentle introduction to Git and GitHub."/>
+    <meta property="og:url" content="https://edgar-treischl.github.io/Workshop_GitHubIntro/"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="article:author" content="Edgar J. Treischl"/>
     <script src="libs/mark.js/mark.min.js"></script>
     <link href="libs/xaringanExtra-search/search.css" rel="stylesheet" />
     <script src="libs/xaringanExtra-search/search.js"></script>
@@ -17,12 +30,15 @@
     <script src="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
     <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 
 
 class: center, middle
+
+
 
 
 
@@ -74,13 +90,24 @@ class: center, middle
 &lt;a href="http://www.edgar-treischl.de" target="_blank"&gt;www.edgar-treischl.de&lt;/a&gt;
 &lt;br/&gt;
 &lt;br/&gt;
-.large[Last update: 2024-12-28]
+.large[Last update: 2025-01-08]
 &lt;br/&gt;
 &lt;br/&gt;
 This presentation is licensed under a CC-BY-NC 4.0 license.
 You may copy, distribute, and use the slides in your own work, as long as you give attribution to the original author on each slide that you use. Commercial use of the contents of these slides is not allowed.
 
-&lt;img align="right" src="images/by-nceu.png" width="150px"/&gt;
+&lt;div class="remark-footer"&gt;
+  &lt;!-- Left-aligned image --&gt;
+  &lt;img src="images/by-nceu.png" alt="Image left" width="150px" class="footer-left"/&gt;
+  
+  &lt;!-- Right-aligned GitHub logo --&gt;
+  &lt;a href="https://github.com/edgar-treischl/Workshop_GitHubIntro" target="_blank"&gt;
+    &lt;img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" 
+         alt="GitHub logo" class="footer-right"/&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+
 
 
 
@@ -93,7 +120,7 @@ You may copy, distribute, and use the slides in your own work, as long as you gi
 
 
 ---
-## 📆 Agenda
+## Agenda
 
 
 
@@ -595,8 +622,8 @@ class: bottom, center
 ### ➕ Create a new repository on GitHub  
 ### 💻 Clone the repository on your local machine
 ### 📂 Add a new repository file
-### ▶️ Commit the changes
-### 📥 Push the changes to the remote repository
+### 🉐 Commit the changes
+### 📪 Push the changes to the remote repository
 
 
 
@@ -618,17 +645,44 @@ class: bottom, center
 .panel[.panel-name[Package]
 
 .pull-left[
-#### The gist package provides a set of functions to work with GitHub Gist. 
 
-#### It allows you to copy, create, and delete gists via the GitHub API. Moreover, it comes with an R Studio addin - a shiny app - to manage your Gists.
+&lt;div class="info-box"&gt;
+  &lt;i&gt;🦜️️&lt;/i&gt; The gist package provides a set of functions to work with GitHub Gist. It allows you to copy, create, and delete gists via the GitHub API. Moreover, it comes with an R Studio addin - a shiny app - to manage your Gists.
+&lt;/div&gt;
+
+
 ]
 
 
 .pull-right[
-&lt;a href="https://edgar-treischl.github.io/gist/" target="_blank"&gt;&lt;img src="https://edgar-treischl.github.io/gist/logo.png" alt="The ggplot2 package" align="right" width="200"/&gt;&lt;/a&gt;
+&lt;a href="https://edgar-treischl.github.io/gist/" target="_blank"&gt;&lt;img src="https://edgar-treischl.github.io/gist/logo.png" alt="The ggplot2 package" align="center" style="width: 45%"/&gt;&lt;/a&gt;
+
 ]
 
 
+
+]
+
+.panel[.panel-name[Addin]
+
+.pull-left[
+
+#### Further functions: Delete and list gists
+
+#### R Studio Addin: 
+
+
+``` r
+#The gistAddin()
+gist::gistAddin()
+```
+
+
+]
+
+.pull-right[
+&lt;img src="https://edgar-treischl.github.io/gist/reference/figures/gistapp.png" style="width: 75%"/&gt;
+]
 
 ]
 
@@ -659,32 +713,11 @@ gist_get(filename = "A_Test.R")
 ]
 
 .pull-right[
-&lt;img src="images/gist_screen.png" style="width: 100%"/&gt;
-]
-]
-
-.panel[.panel-name[Addin]
-
-.pull-left[
-
-#### Further functions: Delete and list gists
-
-#### R Studio Addin: 
-
-
-``` r
-#The gistAddin()
-gist::gistAddin()
-```
-
+&lt;a href="https://gist.github.com/edgar-treischl" target="_blank"&gt;&lt;img src="images/gist_screen.png" alt="The ggplot2 package" align="right" style="width: 100%"/&gt;&lt;/a&gt;
 
 ]
-
-.pull-right[
-&lt;img src="https://edgar-treischl.github.io/gist/reference/figures/gistapp.png" style="width: 75%"/&gt;
 ]
 
-]
 ]
 
 

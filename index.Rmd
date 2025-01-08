@@ -5,7 +5,7 @@ author: "Dr. Edgar Treischl"
 date: "Last update: `r Sys.Date()`"
 output:
   xaringan::moon_reader:
-    css: xaringan-themer.css
+    css: ["xaringan-themer.css", "styles.css"]
     seal: false
     #chakra: libs/remark-latest.min.js
     lib_dir: libs
@@ -44,6 +44,22 @@ has_bash <- Sys.which('bash') != '' && .Platform$OS.type != 'windows'
 library(RefManageR)
 bib <- ReadBib("PracticeR_FINAL.bib", check = FALSE)
 ui <- "- "
+```
+
+```{r meta, echo=FALSE}
+library(metathis)
+meta() %>%
+  meta_general(
+    description = "A gentle introduction to Git and GitHub.",
+    generator = "xaringan and remark.js"
+  ) %>% 
+  meta_name("github-repo" = "edgar-treischl/Workshop_GitHubIntro") %>% 
+  meta_social(
+    title = "Introduction to Git and GitHub",
+    url = "https://edgar-treischl.github.io/Workshop_GitHubIntro/",
+    og_type = "website",
+    og_author = "Edgar J. Treischl"
+  )
 ```
 
 
@@ -91,7 +107,18 @@ style_mono_accent(
 This presentation is licensed under a CC-BY-NC 4.0 license.
 You may copy, distribute, and use the slides in your own work, as long as you give attribution to the original author on each slide that you use. Commercial use of the contents of these slides is not allowed.
 
-<img align="right" src="images/by-nceu.png" width="150px"/>
+<div class="remark-footer">
+  <!-- Left-aligned image -->
+  <img src="images/by-nceu.png" alt="Image left" width="150px" class="footer-left"/>
+  
+  <!-- Right-aligned GitHub logo -->
+  <a href="https://github.com/edgar-treischl/Workshop_GitHubIntro" target="_blank">
+    <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" 
+         alt="GitHub logo" class="footer-right"/>
+  </a>
+</div>
+
+
 
 
 
@@ -104,7 +131,7 @@ You may copy, distribute, and use the slides in your own work, as long as you gi
 
 
 ---
-## `r emoji::emoji("schedule")` Agenda
+## Agenda
 
 
 
@@ -599,17 +626,43 @@ class: bottom, center
 .panel[.panel-name[Package]
 
 .pull-left[
-#### The gist package provides a set of functions to work with GitHub Gist. 
 
-#### It allows you to copy, create, and delete gists via the GitHub API. Moreover, it comes with an R Studio addin - a shiny app - to manage your Gists.
+<div class="info-box">
+  <i>`r emoji::emoji("parrot")`️️</i> The gist package provides a set of functions to work with GitHub Gist. It allows you to copy, create, and delete gists via the GitHub API. Moreover, it comes with an R Studio addin - a shiny app - to manage your Gists.
+</div>
+
+
 ]
 
 
 .pull-right[
-<a href="https://edgar-treischl.github.io/gist/" target="_blank"><img src="https://edgar-treischl.github.io/gist/logo.png" alt="The ggplot2 package" align="right" width="200"/></a>
+<a href="https://edgar-treischl.github.io/gist/" target="_blank"><img src="https://edgar-treischl.github.io/gist/logo.png" alt="The ggplot2 package" align="center" style="width: 45%"/></a>
+
 ]
 
 
+
+]
+
+.panel[.panel-name[Addin]
+
+.pull-left[
+
+#### Further functions: Delete and list gists
+
+#### R Studio Addin: 
+
+```{r, eval=FALSE}
+#The gistAddin()
+gist::gistAddin()
+```
+
+
+]
+
+.pull-right[
+<img src="https://edgar-treischl.github.io/gist/reference/figures/gistapp.png" style="width: 75%"/>
+]
 
 ]
 
@@ -638,31 +691,11 @@ gist_get(filename = "A_Test.R")
 ]
 
 .pull-right[
-<img src="images/gist_screen.png" style="width: 100%"/>
-]
-]
-
-.panel[.panel-name[Addin]
-
-.pull-left[
-
-#### Further functions: Delete and list gists
-
-#### R Studio Addin: 
-
-```{r, eval=FALSE}
-#The gistAddin()
-gist::gistAddin()
-```
-
+<a href="https://gist.github.com/edgar-treischl" target="_blank"><img src="images/gist_screen.png" alt="The ggplot2 package" align="right" style="width: 100%"/></a>
 
 ]
-
-.pull-right[
-<img src="https://edgar-treischl.github.io/gist/reference/figures/gistapp.png" style="width: 75%"/>
 ]
 
-]
 ]
 
 
