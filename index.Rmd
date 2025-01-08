@@ -185,16 +185,17 @@ class: bottom, center
 .right-column[
 - Git is a version control system to track changes over time
 - Continuous integration (CI) and continuous deployment (CD)
-- GitHub is an host (website) for Git-based projects
+- GitHub (GitLab) is an host (website) for Git-based projects
 - Each project is stored in a repository (folder with all files)
 - A repository can be *public* or *private*
 
 
-### Why GitHub?
+### Why Hosts like GitHub?
 
-- Track code
+- Easier to track code changes
 - Share work
-- Automate workflows
+- Automated workflows
+- Websites for projects
 - Work together
 - ...
 
@@ -270,14 +271,6 @@ jobs:
 ]
 ]
 
-.panel[.panel-name[...]
-
-- Work together
-- Host websites for projects
-- GitHub Gist
-- ...
-
-]
 ]
 
 
@@ -416,22 +409,18 @@ git config --global --list
 
 ### Create a Personal Access Token
 
-- Homepage: Settings > Developer settings > Personal access tokens: https://github.com/settings/tokens
-
-### Connect to GitHub via R:
 
 ```{r, eval=FALSE}
-# Create a token: The create_github_token() function will open a 
-#browser window to create a token
+# The create_github_token() function will open a browser window to create a token
 usethis::create_github_token()
 
-#Set the token: The set_github_pat() function will store 
-#the token in the .Renviron file
+#The set_github_pat() function will store the token in the .Renviron file
 credentials::set_github_pat("token")
 
 ```
 
 
+Or manually via: GitHub: Settings > Developer settings > Personal access tokens: https://github.com/settings/tokens
 
 
 
@@ -447,7 +436,7 @@ gh::gh_whoami()
 
 
 ---
-## Getting Started: Create a Repository
+## Getting Started: Create a Repository on GitHub
 
 <img src="images/Fig_0903.png" style="width: 60%"/>
 
@@ -486,22 +475,22 @@ class: bottom, center
 ## Basics of Git: Basic setup
 
 ```bash
-#git init: Initialize a new repository
+# Initialize a new repository
 git init <your repository name>
 
-#git clone: Clone a repository
+# Clone a repository
 git clone <git-repo-url>
 
-#git branch: Create a new branch
+# Create a new branch
 git branch <branch-name>
 
-#git branch --list: List all branches
+# List all branches
 git branch --list
 
-#git branch -d: Delete a branch
+# Delete a branch
 git branch -d <branch-name>
 
-#git checkout: Switch to a branch
+# Switch to a branch
 git checkout <branch-name>
 ```
 
@@ -512,22 +501,22 @@ git checkout <branch-name>
 .pull-left[
 
 ```bash
-#git add: Add a file to the staging area
+# Add a file to the staging area
 git add <file-name-1>
 
-#-A: Add all files to the staging area
+# Add all files to the staging area
 git add -A
 
-#git commit -am: Commit changes
+# Commit changes
 git commit -am <commit-message>
 
-#git push: Push changes to the remote rep
+# Push changes to the remote rep
 git push <remote> <branch-name>
 
-#git pull: Pull changes from the remote rep
+#Pull changes from the remote rep
 git pull
 
-#git merge: Merge two branches
+# Merge two branches
 git merge <branch-name>
 ```
 
@@ -553,26 +542,25 @@ git merge <branch-name>
 .pull-left[
 
 ```bash
-#git blame: Shows who changed what and when
+# Show who changed what and when
 git blame file.txt
 
-#git status: Shows the working tree status
+# Shows the working tree status
 git status
 
-#git diff: Shows changes between commits
+# Shows changes between commits
 git diff
 
 #💀💀💀 DANGER
-#git revert: used to revert some existing commits
+# Revert some existing commits
 git revert SHA
 
-#git reset: Reset the repository to a previous 
-#commit discarding any local changes
+# Reset the repository to a previous commit 
+# Take care: This will discard any local changes
 git reset 
 
-#git reset --hard SHA
-#A "hard reset": forcefully discard any 
-# local changes and modifications
+#Ultima ratio ;-)
+# A "hard reset": forcefully discard any local changes
 ```
 
 ]
@@ -584,7 +572,7 @@ git reset
 
 
 ---
-## Basics of Git: Commit history
+## Basics of Git: Commit history in R Studio
 
 <img src="images/Fig_0908.png" style="width: 80%"/>
 
@@ -618,25 +606,35 @@ class: bottom, center
 
 
 
+
 ---
 ## Gist
 
 .panelset[
 
+
 .panel[.panel-name[Package]
 
 .pull-left[
 
-<div class="info-box">
-  <i>`r emoji::emoji("parrot")`️️</i> The gist package provides a set of functions to work with GitHub Gist. It allows you to copy, create, and delete gists via the GitHub API. Moreover, it comes with an R Studio addin - a shiny app - to manage your Gists.
-</div>
+GitHub Gist is a service provided by GitHub that allows you to share and store snippets of code, text, or any other kind of file.
+
+- Quick sharing of code (with your future self)
+- Code embedding
+- No need for a full repository
+
 
 
 ]
 
 
 .pull-right[
-<a href="https://edgar-treischl.github.io/gist/" target="_blank"><img src="https://edgar-treischl.github.io/gist/logo.png" alt="The ggplot2 package" align="center" style="width: 45%"/></a>
+
+<div class="info-box">
+  <i>`r emoji::emoji("parrot")`️️</i> The gist package provides a set of functions to work with GitHub Gist. It allows you to copy, create, and delete gists via the GitHub API. Moreover, it comes with an R Studio addin - a shiny app - to manage your Gists.
+</div>
+
+<a href="https://edgar-treischl.github.io/gist/" target="_blank"><img src="https://edgar-treischl.github.io/gist/logo.png" alt="The ggplot2 package" align="center" style="width: 25%"/></a>
 
 ]
 
@@ -644,18 +642,23 @@ class: bottom, center
 
 ]
 
-.panel[.panel-name[Addin]
+.panel[.panel-name[R Studio Addin]
 
 .pull-left[
 
-#### Further functions: Delete and list gists
 
 #### R Studio Addin: 
+
+```{r, eval=FALSE}
+#You can install the development version via:
+devtools::install_github("edgar-treischl/gist")
+```
 
 ```{r, eval=FALSE}
 #The gistAddin()
 gist::gistAddin()
 ```
+
 
 
 ]
@@ -666,7 +669,7 @@ gist::gistAddin()
 
 ]
 
-.panel[.panel-name[Workflow]
+.panel[.panel-name[Via the console]
 
 .pull-left[
 
@@ -745,10 +748,6 @@ print(bib[key = "chacon_pro_2014"],
                style = "html", 
                bib.style = "authoryear"))
 
-print(bib[key = "shiny"], 
-  .opts = list(check.entries = TRUE, 
-               style = "html", 
-               bib.style = "authoryear"))
 
 print(bib[key = "treischl_practice_2023"], 
   .opts = list(check.entries = FALSE, 

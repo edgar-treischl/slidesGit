@@ -174,16 +174,17 @@ class: bottom, center
 .right-column[
 - Git is a version control system to track changes over time
 - Continuous integration (CI) and continuous deployment (CD)
-- GitHub is an host (website) for Git-based projects
+- GitHub (GitLab) is an host (website) for Git-based projects
 - Each project is stored in a repository (folder with all files)
 - A repository can be *public* or *private*
 
 
-### Why GitHub?
+### Why Hosts like GitHub?
 
-- Track code
+- Easier to track code changes
 - Share work
-- Automate workflows
+- Automated workflows
+- Websites for projects
 - Work together
 - ...
 
@@ -261,14 +262,6 @@ jobs:
 ]
 ]
 
-.panel[.panel-name[...]
-
-- Work together
-- Host websites for projects
-- GitHub Gist
-- ...
-
-]
 ]
 
 
@@ -424,22 +417,18 @@ git config --global --list
 
 ### Create a Personal Access Token
 
-- Homepage: Settings &gt; Developer settings &gt; Personal access tokens: https://github.com/settings/tokens
-
-### Connect to GitHub via R:
 
 
 ``` r
-# Create a token: The create_github_token() function will open a 
-#browser window to create a token
+# The create_github_token() function will open a browser window to create a token
 usethis::create_github_token()
 
-#Set the token: The set_github_pat() function will store 
-#the token in the .Renviron file
+#The set_github_pat() function will store the token in the .Renviron file
 credentials::set_github_pat("token")
 ```
 
 
+Or manually via: GitHub: Settings &gt; Developer settings &gt; Personal access tokens: https://github.com/settings/tokens
 
 
 
@@ -466,7 +455,7 @@ gh::gh_whoami()
 
 
 ---
-## Getting Started: Create a Repository
+## Getting Started: Create a Repository on GitHub
 
 &lt;img src="images/Fig_0903.png" style="width: 60%"/&gt;
 
@@ -505,22 +494,22 @@ class: bottom, center
 ## Basics of Git: Basic setup
 
 ```bash
-#git init: Initialize a new repository
+# Initialize a new repository
 git init &lt;your repository name&gt;
 
-#git clone: Clone a repository
+# Clone a repository
 git clone &lt;git-repo-url&gt;
 
-#git branch: Create a new branch
+# Create a new branch
 git branch &lt;branch-name&gt;
 
-#git branch --list: List all branches
+# List all branches
 git branch --list
 
-#git branch -d: Delete a branch
+# Delete a branch
 git branch -d &lt;branch-name&gt;
 
-#git checkout: Switch to a branch
+# Switch to a branch
 git checkout &lt;branch-name&gt;
 ```
 
@@ -531,22 +520,22 @@ git checkout &lt;branch-name&gt;
 .pull-left[
 
 ```bash
-#git add: Add a file to the staging area
+# Add a file to the staging area
 git add &lt;file-name-1&gt;
 
-#-A: Add all files to the staging area
+# Add all files to the staging area
 git add -A
 
-#git commit -am: Commit changes
+# Commit changes
 git commit -am &lt;commit-message&gt;
 
-#git push: Push changes to the remote rep
+# Push changes to the remote rep
 git push &lt;remote&gt; &lt;branch-name&gt;
 
-#git pull: Pull changes from the remote rep
+#Pull changes from the remote rep
 git pull
 
-#git merge: Merge two branches
+# Merge two branches
 git merge &lt;branch-name&gt;
 ```
 
@@ -572,26 +561,25 @@ git merge &lt;branch-name&gt;
 .pull-left[
 
 ```bash
-#git blame: Shows who changed what and when
+# Show who changed what and when
 git blame file.txt
 
-#git status: Shows the working tree status
+# Shows the working tree status
 git status
 
-#git diff: Shows changes between commits
+# Shows changes between commits
 git diff
 
 #💀💀💀 DANGER
-#git revert: used to revert some existing commits
+# Revert some existing commits
 git revert SHA
 
-#git reset: Reset the repository to a previous 
-#commit discarding any local changes
+# Reset the repository to a previous commit 
+# Take care: This will discard any local changes
 git reset 
 
-#git reset --hard SHA
-#A "hard reset": forcefully discard any 
-# local changes and modifications
+#Ultima ratio ;-)
+# A "hard reset": forcefully discard any local changes
 ```
 
 ]
@@ -603,7 +591,7 @@ git reset
 
 
 ---
-## Basics of Git: Commit history
+## Basics of Git: Commit history in R Studio
 
 &lt;img src="images/Fig_0908.png" style="width: 80%"/&gt;
 
@@ -622,8 +610,8 @@ class: bottom, center
 ### ➕ Create a new repository on GitHub  
 ### 💻 Clone the repository on your local machine
 ### 📂 Add a new repository file
-### 🉐 Commit the changes
-### 📪 Push the changes to the remote repository
+### 🔅 Commit the changes
+### 📨 Push the changes to the remote repository
 
 
 
@@ -637,25 +625,35 @@ class: bottom, center
 
 
 
+
 ---
 ## Gist
 
 .panelset[
 
+
 .panel[.panel-name[Package]
 
 .pull-left[
 
-&lt;div class="info-box"&gt;
-  &lt;i&gt;🦜️️&lt;/i&gt; The gist package provides a set of functions to work with GitHub Gist. It allows you to copy, create, and delete gists via the GitHub API. Moreover, it comes with an R Studio addin - a shiny app - to manage your Gists.
-&lt;/div&gt;
+GitHub Gist is a service provided by GitHub that allows you to share and store snippets of code, text, or any other kind of file.
+
+- Quick sharing of code (with your future self)
+- Code embedding
+- No need for a full repository
+
 
 
 ]
 
 
 .pull-right[
-&lt;a href="https://edgar-treischl.github.io/gist/" target="_blank"&gt;&lt;img src="https://edgar-treischl.github.io/gist/logo.png" alt="The ggplot2 package" align="center" style="width: 45%"/&gt;&lt;/a&gt;
+
+&lt;div class="info-box"&gt;
+  &lt;i&gt;🦜️️&lt;/i&gt; The gist package provides a set of functions to work with GitHub Gist. It allows you to copy, create, and delete gists via the GitHub API. Moreover, it comes with an R Studio addin - a shiny app - to manage your Gists.
+&lt;/div&gt;
+
+&lt;a href="https://edgar-treischl.github.io/gist/" target="_blank"&gt;&lt;img src="https://edgar-treischl.github.io/gist/logo.png" alt="The ggplot2 package" align="center" style="width: 25%"/&gt;&lt;/a&gt;
 
 ]
 
@@ -663,19 +661,25 @@ class: bottom, center
 
 ]
 
-.panel[.panel-name[Addin]
+.panel[.panel-name[R Studio Addin]
 
 .pull-left[
 
-#### Further functions: Delete and list gists
 
 #### R Studio Addin: 
+
+
+``` r
+#You can install the development version via:
+devtools::install_github("edgar-treischl/gist")
+```
 
 
 ``` r
 #The gistAddin()
 gist::gistAddin()
 ```
+
 
 
 ]
@@ -686,7 +690,7 @@ gist::gistAddin()
 
 ]
 
-.panel[.panel-name[Workflow]
+.panel[.panel-name[Via the console]
 
 .pull-left[
 
@@ -767,11 +771,6 @@ Englisch.
 2nd ed.
 New York, NY: Apress.
 ISBN: 978-1-4842-0077-3.&lt;/cite&gt;&lt;/p&gt;
-&lt;p&gt;&lt;cite&gt;Chang, W., J. Cheng, J. Allaire, et al.
-(2022).
-&lt;em&gt;shiny: Web Application Framework for R&lt;/em&gt;.
-R package version 1.7.2.
-URL: &lt;a href="https://CRAN.R-project.org/package=shiny"&gt;https://CRAN.R-project.org/package=shiny&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
 &lt;p&gt;&lt;cite&gt;Treischl, E. J.
 (2023).
 &lt;em&gt;Practice R: An interactive textbook&lt;/em&gt;.
