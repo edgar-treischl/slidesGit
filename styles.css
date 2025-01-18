@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,400i,500,500i&display=swap');
+
+.fancy { 
+  font-family: 'Lato', sans-serif;
+}
+
+.ciao { font-size: 2.5em; }
+
 .remark-code, .remark-inline-code {
   max-width: 100%;
   overflow-x: auto;
@@ -68,9 +76,9 @@ blockquote.info-box {
   --text-bold-color: black;
   --code-highlight-color: rgba(255,255,0,0.5);
   --inverse-text-color: #FFFFFF;
-  --inverse-background-color: black;
+  --inverse-background-color: #457b9d;
   --inverse-header-color: #FFFFFF;
-  --inverse-link-color: black;
+  --inverse-link-color: #FFFFFF;
   --title-slide-background-color: black;
   --title-slide-text-color: #FFFFFF;
   --header-background-color: black;
@@ -114,5 +122,48 @@ blockquote.info-box {
   width: 50px;  /* Adjust width for GitHub logo */
   height: auto;
 }
+
+
+/*GitHub logo*/
+/* GitHub button styling */
+.github-button {
+  position: fixed;            /* Fixed position to stay in the same place while scrolling */
+  bottom: 20px;               /* 20px from the bottom of the viewport */
+  right: 20px;                /* 20px from the right of the viewport */
+  background-color: #333;     /* Dark background color */
+  border-radius: 50%;         /* Circular shape */
+  padding: 15px;              /* Padding inside the button */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  z-index: 1000;              /* Ensure the button appears above other content */
+}
+
+/* Hover effect - slightly enlarge and add shadow */
+.github-button:hover {
+  transform: scale(1.1);                /* Enlarge the button on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Make shadow more prominent */
+}
+
+/* GitHub logo image inside the button */
+.github-button img {
+  width: 30px;     /* Set the width of the GitHub logo */
+  height: 30px;    /* Set the height of the GitHub logo */
+}
+
+/* Optional: Bouncing animation */
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-10px); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+/* Apply the bouncing animation */
+.github-button {
+  animation: bounce 2s infinite ease-in-out;
+}
+
+
 
 

@@ -31,7 +31,8 @@ library(gridExtra)
 library(cowplot)
 
 #library(jtools)
-
+library(icons)
+icon_style(fontawesome("rocket", style = "solid"), scale = 2, fill = "red")
 
 knitr::opts_chunk$set(fig.retina = 3, warning = FALSE, message = FALSE)
 
@@ -67,14 +68,14 @@ meta() %>%
 
 ```{r best-features, echo=FALSE}
 #search
-xaringanExtra::use_search(show_icon = TRUE, position = "top-right")
+#xaringanExtra::use_search(show_icon = TRUE, position = "top-right")
 
 xaringanExtra::use_progress_bar(color = "#023047", location = "top")
 
-xaringanExtra::style_search(match_background = "black",
-                            input_background = "white",
-                            input_border = "black",
-                            match_current_background = "green")
+# xaringanExtra::style_search(match_background = "black",
+#                             input_background = "white",
+#                             input_border = "black",
+#                             match_current_background = "green")
 
 
 xaringanExtra::use_panelset()
@@ -90,15 +91,31 @@ style_mono_accent(
   text_font_google   = google_font("Montserrat", "300", "300i"),
   code_font_google   = google_font("Fira Code")
 )
+
+
+
+
+colors = c(
+  red = "#f34213",
+  purple = "#3e2f5b",
+  orange = "#ff8811",
+  green = "#136f63",
+  white = "#FFFFFF"
+)
 ```
 
 
 
-  
-## Introduction to Git and GitHub
+```{r, results='asis', echo=FALSE}
+cat(readLines("github-corner.html"), sep = "\n")
+```
 
-.large[Dr. Edgar J. Treischl] <br>
-<a href="http://www.edgar-treischl.de" target="_blank">www.edgar-treischl.de</a>
+
+  
+## Introduction to Git(Hub)
+
+### <a href="http://www.edgar-treischl.de" target="_blank">Dr. Edgar J. Treischl</a>
+
 <br/>
 <br/>
 .large[Last update: `r Sys.Date()`]
@@ -110,12 +127,6 @@ You may copy, distribute, and use the slides in your own work, as long as you gi
 <div class="remark-footer">
   <!-- Left-aligned image -->
   <img src="images/by-nceu.png" alt="Image left" width="150px" class="footer-left"/>
-  
-  <!-- Right-aligned GitHub logo -->
-  <a href="https://github.com/edgar-treischl/Workshop_GitHubIntro" target="_blank">
-    <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" 
-         alt="GitHub logo" class="footer-right"/>
-  </a>
 </div>
 
 
@@ -123,17 +134,14 @@ You may copy, distribute, and use the slides in your own work, as long as you gi
 
 
 
-```{css, echo = F}
-.reduced_opacity {
-  opacity: 0.5;
-}
-```
+
+
+
+
 
 
 ---
 ## Agenda
-
-
 
 
 
@@ -142,8 +150,7 @@ You may copy, distribute, and use the slides in your own work, as long as you gi
 ### `r emoji::emoji("one")` Git/GitHub ... What?
 ### `r emoji::emoji("two")` Getting Started
 ### `r emoji::emoji("three")` Basics of Git
-### `r emoji::emoji("four")` Practice Makes Perfect
-### `r emoji::emoji("five")` Gist
+### `r emoji::emoji("four")` Gist
 
 
 
@@ -168,9 +175,10 @@ class: bottom, center
 
 
 
+
 ---
 
-## Git/GitHub ... What?
+## 01: Git/GitHub ... What?
 
 .left-column[
 <br/>
@@ -210,7 +218,7 @@ class: bottom, center
 
 
 ---
-## Git/GitHub ... What?
+## 01: Git/GitHub ... What?
 
 
 .panelset[
@@ -286,7 +294,7 @@ class: bottom, center
 
 
 ---
-## Getting Started: Install Git
+## 02: Install Git
 
 .left-column[
 <br/>
@@ -323,7 +331,7 @@ background-image: url(https://usethis.r-lib.org/logo.png)
 background-position: 90% 5%
 background-size: 10%
 
-## Getting Started: Introduce Yourself
+## 02: Introduce Yourself
 
 
 ### Via the shell or ...
@@ -345,7 +353,7 @@ use_git_config(user.name = "Jane Doe",
 
 
 ---
-## Getting Started: Introduce Yourself
+## 02: Introduce Yourself
 
 ### The list option returns all settings
 
@@ -355,7 +363,7 @@ git config --global --list
 
 
 ---
-## Getting Started: New Vocabulary
+## 02: New Vocabulary
 
 .pull-left[
 
@@ -378,7 +386,7 @@ git config --global --list
 
 
 ---
-## Getting Started: New Vocabulary
+## 02: New Vocabulary
 
 
 .pull-left[
@@ -405,7 +413,7 @@ git config --global --list
 
 
 ---
-## Getting Started: Connect to GitHub
+## 02: Connect to GitHub
 
 ### Create a Personal Access Token
 
@@ -425,7 +433,7 @@ Or manually via: GitHub: Settings > Developer settings > Personal access tokens:
 
 
 ---
-## Getting Started: Connect to GitHub
+## 02: Connect to GitHub
 
 
 
@@ -436,28 +444,28 @@ gh::gh_whoami()
 
 
 ---
-## Getting Started: Create a Repository on GitHub
+## 02: Create a Repository on GitHub
 
 <img src="images/Fig_0903.png" style="width: 60%"/>
 
 
 ---
-## Getting Started: Quick Setup
+## 02: Quick Setup
 <img src="images/Fig_0904.png" style="width: 80%"/>
 
 ---
-## Getting Started: Setup in RStudio
+## 02: Setup in RStudio
 
 <img src="images/Fig_0905.png" style="width: 50%"/>
 
 
 ---
-## Getting Started: Git Pane in RStudio I
+## 02: Git Pane in RStudio I
 
 <img src="images/Fig_0906.png" style="width: 80%"/>
 
 ---
-## Getting Started: Git Pane in RStudio II
+## 02: Git Pane in RStudio II
 
 <img src="images/Fig_0907.png" style="width: 80%"/>
 
@@ -472,7 +480,7 @@ class: bottom, center
 
 
 ---
-## Basics of Git: Basic setup
+## 03: Basic setup
 
 ```bash
 # Initialize a new repository
@@ -496,7 +504,7 @@ git checkout <branch-name>
 
 
 ---
-## Basics of Git: Daily workflow
+## 03: Daily workflow
 
 .pull-left[
 
@@ -537,7 +545,7 @@ git merge <branch-name>
 
 
 ---
-## Basics of Git: Troubleshooting `r emoji::emoji("skull")`
+## 03: Troubleshooting `r emoji::emoji("skull")`
 
 .pull-left[
 
@@ -572,7 +580,7 @@ git reset
 
 
 ---
-## Basics of Git: Commit history in R Studio
+## 03: Commit history in R Studio
 
 <img src="images/Fig_0908.png" style="width: 80%"/>
 
@@ -608,7 +616,7 @@ class: bottom, center
 
 
 ---
-## Gist
+## 04: Gist
 
 .panelset[
 
@@ -705,32 +713,26 @@ gist_get(filename = "A_Test.R")
 
 
 
+
+
+
+
 ---
-class: center, middle
-
-.left-column[
-
-## Keep in touch
-
-#### <a href="https://edgar-treischl.de" target="_blank"><img src="https://avatars.githubusercontent.com/u/77931249?s=400&u=eaf1d0871b643dd32cc0ff9f777edef28e6569a8&v=4" alt="www.edgar-treischl.de" width="25%"/><br/>www.edgar-treischl.de</a>
-<br/>
-
-#### <a href="https://github.com/edgar-treischl" target="_blank"><img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="https://github.com/edgar-treischl" width="30%"/><br/>edgar-treischl</a>
-
-
-]
-
-.right-column[
+class: right, middle
 
 
 ## Thank you for your attention!
-<br/>
-
-<img src="images/octocat.png" style="width: 30%"/>
-
-]
 
 
+<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/77931249?s=400&u=eaf1d0871b643dd32cc0ff9f777edef28e6569a8&v=4" width="150px"/>
+
+
+
+[`r icons::fontawesome("rocket")` www.edgar-treischl.de](https://www.edgar-treischl.de)
+
+[`r icons::fontawesome("github")` @edgar-treischl](https://github.com/edgar-treischl)
+
+[`r icons::fontawesome("envelope")` edgar.treischl@isb.bayern.de](mailto:edgar.treischl@isb.bayern.de)
 
 
 
@@ -765,22 +767,5 @@ print(bib[key = "devtools"],
                bib.style = "authoryear"))
 
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
