@@ -87,10 +87,17 @@ xaringanExtra::use_clipboard()
 library(xaringanthemer)
 style_mono_accent(
   base_color = "black",
-  header_font_google = google_font("Lato"),
-  text_font_google   = google_font("Montserrat", "300", "300i"),
+  header_font_google = google_font("Commissioner"),
+  text_font_google   = google_font("EB Garamond"),
   code_font_google   = google_font("Fira Code")
 )
+
+# style_mono_accent(
+#   base_color = "black",
+#   header_font_google = google_font("Lato"),
+#   text_font_google   = google_font("Montserrat", "300", "300i"),
+#   code_font_google   = google_font("Fira Code")
+# )
 
 
 
@@ -730,7 +737,7 @@ class: right, middle
 
 [`r icons::fontawesome("rocket")` www.edgar-treischl.de](https://www.edgar-treischl.de)
 
-[`r icons::fontawesome("github")` @edgar-treischl](https://github.com/edgar-treischl)
+[`r icons::fontawesome("github")` edgar-treischl](https://github.com/edgar-treischl)
 
 [`r icons::fontawesome("envelope")` edgar.treischl@isb.bayern.de](mailto:edgar.treischl@isb.bayern.de)
 
