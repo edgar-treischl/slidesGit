@@ -123,7 +123,7 @@ background-size: cover
 .pull-right[
 
 
-&lt;a href="https://edgar-treischl.github.io/PracticeR/" target="_blank"&gt;&lt;img src="https://edgar-treischl.github.io/PracticeR/reference/figures/cover.png" alt="The ggplot2 package" width="200"/&gt;&lt;/a&gt;
+&lt;a href="https://edgar-treischl.github.io/PracticeR/" target="_blank"&gt;&lt;img src="https://edgar-treischl.github.io/PracticeR/reference/figures/cover.png" alt="Practice R by Edgar Treischl" width="200"/&gt;&lt;/a&gt;
 
 This workshop is based on Practice R.
 ]
@@ -194,18 +194,18 @@ class: bottom, center
 .pull-left[
 
 ``` r
-#Source the script from the raw github link
-#The raw github link
-link &lt;- "https://raw.githubusercontent.com/
-        edgar-treischl/.../file.R"
+# Source the script
+link &lt;- paste0("https://raw.githubusercontent.com/",
+               "edgar-treischl/edgar/refs/heads/",
+               "master/inst/graphs/long_wide.R")
 
-#source_url: Source a script from a url
 devtools::source_url(link)
+showplot()
 ```
 
 
 ``` r
-#runGitHub: Run a shiny app from GitHub
+# Run a shiny app from GitHub
 shiny::runGitHub("power-app", 
                  "edgar-treischl", 
                  ref="main")
@@ -220,6 +220,10 @@ shiny::runGitHub("power-app",
 ]
 
 .panel[.panel-name[Automate workflows]
+
+- Deploy a website, book, presentation
+- Run tests
+- Create a package
 
 .pull-left[
 
@@ -280,6 +284,7 @@ class: bottom, center
 
 ``` bash
 # I am git code to check if git is installed
+
 # Go to the console and type:
 git --version
 ```
@@ -289,7 +294,7 @@ git --version
 ```
 
 
-- Create a free GitHub account
+- Next, create a free GitHub account
 
 ]
 
@@ -300,10 +305,10 @@ background-image: url(https://usethis.r-lib.org/logo.png)
 background-position: 90% 5%
 background-size: 10%
 
-## 02: Introduce Yourself
+## 02: Introduce Yourself ...
 
 
-### Via the shell or ...
+### via the shell ...
 
 ```bash
 #In the console
@@ -312,7 +317,7 @@ git config --global user.email "email@adress.com"
 
 ```
 
-### With the usethis package
+### with the or 🚀 usethis package
 
 
 ``` r
@@ -325,7 +330,7 @@ use_git_config(user.name = "Jane Doe",
 ---
 ## 02: Introduce Yourself
 
-### The list option returns all settings
+### Check global configuration settings
 
 
 ``` bash
@@ -344,9 +349,20 @@ git config --global --list
 
 
 ---
-## 02: New Vocabulary
+background-image: url("images/cat.gif")
+background-size: cover
+class: bottom, center
+
+# .white[Git can be scary, but ...] 
+
+
+---
+## 02: New Vocabulary 🤺 
+
 
 .pull-left[
+
+No but, Git can be scary because it's full of technical jargon*:
 
 - **Repository**: A folder with all project files
 - **Push**: Send code (files) to Git 
@@ -354,6 +370,9 @@ git config --global --list
 - **Commit**: A snapshot of a repository at a certain point in time
 - **Branch**: A parallel version within the repository to test new features
 
+...
+
+* As often, R Studio helps us to work with Git.
 
 ]
 
@@ -367,7 +386,7 @@ git config --global --list
 
 
 ---
-## 02: New Vocabulary
+## 02: New Vocabulary 🤺 
 
 
 .pull-left[
@@ -396,7 +415,7 @@ git config --global --list
 ---
 ## 02: Connect to GitHub
 
-### Create a Personal Access Token
+### Create a Personal Access Token (PAT)
 
 
 
@@ -409,7 +428,11 @@ credentials::set_github_pat("token")
 ```
 
 
-Or manually via: GitHub: Settings &gt; Developer settings &gt; Personal access tokens: https://github.com/settings/tokens
+### Or manually via: 
+
+On the GitHub website, go to: 
+  - Settings &gt; Developer settings &gt; Personal access tokens: 
+  - https://github.com/settings/tokens
 
 
 
@@ -417,6 +440,7 @@ Or manually via: GitHub: Settings &gt; Developer settings &gt; Personal access t
 ## 02: Connect to GitHub
 
 
+### Check if R Studio is connected to GitHub:
 
 
 ``` r
@@ -434,6 +458,7 @@ gh::gh_whoami()
 ## }
 ```
 
+#### ㊗️ ... you're connected!
 
 ---
 ## 02: Create a Repository on GitHub
@@ -590,9 +615,9 @@ class: bottom, center
 
 ### ➕ Create a new repository on GitHub  
 ### 💻 Clone the repository on your local machine
-### 📂 Add a new repository file
-### ✅ Commit the changes
-### 📫 Push the changes to the remote repository
+### 📁 Add a new repository file
+### 🆎 Commit the changes
+### 📬 Push the changes to the remote repository
 
 
 
