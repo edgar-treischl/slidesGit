@@ -17,7 +17,9 @@ output:
       titleSlideClass: [center, middle]
 ---
 
-class: center, middle
+background-image: url("images/bg.png")
+class: left, middle
+background-size: cover
 
 
 
@@ -72,10 +74,20 @@ meta() %>%
 
 xaringanExtra::use_progress_bar(color = "#023047", location = "top")
 
+xaringanExtra::use_tile_view()
+
 # xaringanExtra::style_search(match_background = "black",
 #                             input_background = "white",
 #                             input_border = "black",
 #                             match_current_background = "green")
+
+#'<a href="#1">🏠 Introduction to Git(Hub)</a>'
+#'#
+
+# xaringanExtra::use_banner(
+#   top_left = 'Treischl: Introduction to Git(Hub)',
+#   exclude = "title-slide"
+# )
 
 
 xaringanExtra::use_panelset()
@@ -117,24 +129,18 @@ colors = c(
 cat(readLines("github-corner.html"), sep = "\n")
 ```
 
+<br/>
 
-  
-## Introduction to Git(Hub)
+# .white[Introduction to] 
+# .white[Git(Hub) ] 
 
-### <a href="http://www.edgar-treischl.de" target="_blank">Dr. Edgar J. Treischl</a>
+<a href="http://www.edgar-treischl.de" target="_blank" style = "color:#C51717;">Dr. Edgar J. Treischl</a>
+
 
 <br/>
-<br/>
-.large[Last update: `r Sys.Date()`]
-<br/>
-<br/>
-This presentation is licensed under a CC-BY-NC 4.0 license.
-You may copy, distribute, and use the slides in your own work, as long as you give attribution to the original author on each slide that you use. Commercial use of the contents of these slides is not allowed.
+.white[Last update: `r Sys.Date()`]
 
-<div class="remark-footer">
-  <!-- Left-aligned image -->
-  <img src="images/by-nceu.png" alt="Image left" width="150px" class="footer-left"/>
-</div>
+<div class="remark-footer"><a href="https://unsplash.com/de/@synkevych" target="_blank" style="color: gray;">Images: Roman Synkevych</a></div>
 
 
 
@@ -215,8 +221,6 @@ class: bottom, center
 - ...
 
 ]
-
-
 
 
 
@@ -616,7 +620,7 @@ background-image: url("images/bite.gif")
 background-size: cover
 class: bottom, center
 
-# .black[`r emoji::emoji("five")` Gist]
+# .black[`r emoji::emoji("four")` Gist]
 
 
 
@@ -741,6 +745,19 @@ class: right, middle
 
 [`r icons::fontawesome("envelope")` edgar.treischl@isb.bayern.de](mailto:edgar.treischl@isb.bayern.de)
 
+
+---
+class: right, middle
+
+
+
+## Licence
+
+This presentation is licensed under a CC-BY-NC 4.0 license.
+You may copy, distribute, and use the slides in your own work, as long as you give attribution to the original author on each slide that you use. Commercial use of the contents of these slides is not allowed.
+<br/>
+<br/>
+<img src="images/by-nceu.png" alt="Image left" width="150px"/>
 
 
 
