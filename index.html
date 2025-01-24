@@ -84,7 +84,7 @@ background-size: cover
 
 &lt;br/&gt;
 &lt;br/&gt;
-.white[Last update: 2025-01-23]
+.white[Last update: 2025-01-24]
 &lt;br/&gt;
 &lt;br/&gt;
 &lt;h4 style = "color:#ffff; text-align: right;"&gt;Press ⭕ or ➡️&lt;/h4&gt;
@@ -142,7 +142,7 @@ class: bottom, center
 
 ---
 
-## 01: Git/GitHub ... What?
+## (01) Git/GitHub ... What?
 
 .left-column[
 &lt;br/&gt;
@@ -180,7 +180,7 @@ class: bottom, center
 
 
 ---
-## 01: Git/GitHub ... What?
+## (01) Git/GitHub ... What?
 
 
 .panelset[
@@ -260,9 +260,31 @@ class: bottom, center
 # .white[2️⃣ Getting Started] 
 
 
+---
+## (02) Getting Started
+
+### Push and pull 💪 on a regular basis:
+
+1. Install Git:
+  - Install on your local machine
+  - Introduce *yourself*
+  - Learn some *Git*
+
+2. Connect to GitHub
+  - Create a *Personal Access Token* (PAT)
+  - Create a *Repository*
+
+3. Connect GitHub and R Studio
+  - *Clone* the newly created repository
+  - *Setup R Studio* and connect to GitHub
+  - Get in touch with the R Studio *Git pane*
+
+
+
+
 
 ---
-## 02: Install Git
+## (02) Install Git on your local machine
 
 .left-column[
 &lt;br/&gt;
@@ -305,10 +327,10 @@ background-image: url(https://usethis.r-lib.org/logo.png)
 background-position: 90% 5%
 background-size: 10%
 
-## 02: Introduce Yourself ...
+## (02) Install Git: Introduce yourself
 
 
-### via the shell ...
+### Via the shell
 
 ```bash
 #In the console
@@ -317,7 +339,7 @@ git config --global user.email "email@adress.com"
 
 ```
 
-### with the or 🚀 usethis package
+### Or with the 🚀 usethis package
 
 
 ``` r
@@ -328,7 +350,7 @@ use_git_config(user.name = "Jane Doe",
 
 
 ---
-## 02: Introduce Yourself
+## (02) Install Git: Introduce yourself
 
 ### Check global configuration settings
 
@@ -357,12 +379,12 @@ class: bottom, center
 
 
 ---
-## 02: New Vocabulary 🤺 
+## (02) Install Git: New Vocabulary 🤺
 
 
 .pull-left[
 
-No but, Git can be scary because it's full of technical jargon*:
+Wait, Git is scary because it's full of technical jargon&lt;sup&gt;1&lt;/sup&gt;:
 
 - **Repository**: A folder with all project files
 - **Push**: Send code (files) to Git 
@@ -372,7 +394,9 @@ No but, Git can be scary because it's full of technical jargon*:
 
 ...
 
-* As often, R Studio helps us to work with Git.
+.footnote[
+[1] As often, R Studio helps us to work with Git.
+]
 
 ]
 
@@ -386,7 +410,8 @@ No but, Git can be scary because it's full of technical jargon*:
 
 
 ---
-## 02: New Vocabulary 🤺 
+## (02) Install Git: New Vocabulary 🤺 
+
 
 
 .pull-left[
@@ -413,10 +438,9 @@ No but, Git can be scary because it's full of technical jargon*:
 
 
 ---
-## 02: Connect to GitHub
+## (02) Connect to GitHub: Create a PAT
 
-### Create a Personal Access Token (PAT)
-
+### Create a PAT in R Studio:
 
 
 ``` r
@@ -437,7 +461,7 @@ On the GitHub website, go to:
 
 
 ---
-## 02: Connect to GitHub
+## (02) Connect to GitHub
 
 
 ### Check if R Studio is connected to GitHub:
@@ -461,31 +485,55 @@ gh::gh_whoami()
 #### ㊗️ ... you're connected!
 
 ---
-## 02: Create a Repository on GitHub
+## (02) Connect to GitHub: Create a repository
 
 &lt;img src="images/Fig_0903.png" style="width: 60%"/&gt;
 
 
 ---
-## 02: Quick Setup
+## (02) Connect to GitHub: Create a repository
+
 &lt;img src="images/Fig_0904.png" style="width: 80%"/&gt;
 
 ---
-## 02: Setup in RStudio
+## (02) Connect GitHub and R Studio
 
-&lt;img src="images/Fig_0905.png" style="width: 50%"/&gt;
+.pull-left[
+
+#### 1. Create a new project in R Studio and click next.
+
+#### 2. Pick Version Control and cick next.
+
+#### 3. Pick Git and click next.
+
+#### 4. Paste the repository URL: ↪️
+
+]
+
+
+
+.pull-right[
+&lt;img src="images/Fig_0905.png" style="width: 100%"/&gt;
+]
+
+
 
 
 ---
-## 02: Git Pane in RStudio I
+## (02) Connect GitHub and R Studio: Git Pane
+
+#### Once R Studio is connected to GitHub, you can work with the Git pane in R Studio:
 
 &lt;img src="images/Fig_0906.png" style="width: 80%"/&gt;
 
 ---
-## 02: Git Pane in RStudio II
+## (02) Connect GitHub and R Studio: Git Pane
 
-&lt;img src="images/Fig_0907.png" style="width: 80%"/&gt;
+&lt;img src="images/Fig_0907.png" style="width: 75%"/&gt;
 
+
+
+### Push and pull and let it all out  💃 directly from R Studio
 
 
 ---
@@ -497,7 +545,7 @@ class: bottom, center
 
 
 ---
-## 03: Basic setup
+## (03) Git basics
 
 ```bash
 # Initialize a new repository
@@ -521,7 +569,7 @@ git checkout &lt;branch-name&gt;
 
 
 ---
-## 03: Daily workflow
+## (03) Git for the daily workflow
 
 .pull-left[
 
@@ -562,7 +610,7 @@ git merge &lt;branch-name&gt;
 
 
 ---
-## 03: Troubleshooting 💀
+## (03) Git for troubleshooting 💀
 
 .pull-left[
 
@@ -597,7 +645,7 @@ git reset
 
 
 ---
-## 03: Commit history in R Studio
+## (03) Commit history in R Studio
 
 &lt;img src="images/Fig_0908.png" style="width: 80%"/&gt;
 
@@ -615,9 +663,9 @@ class: bottom, center
 
 ### ➕ Create a new repository on GitHub  
 ### 💻 Clone the repository on your local machine
-### 📁 Add a new repository file
-### 🆎 Commit the changes
-### 📬 Push the changes to the remote repository
+### 📂 Add a new repository file
+### 🈹 Commit the changes
+### 📫 Push the changes to the remote repository
 
 
 
@@ -633,7 +681,7 @@ class: bottom, center
 
 
 ---
-## 04: Gist
+## (04) Gist
 
 .panelset[
 
@@ -656,7 +704,7 @@ GitHub Gist is a service provided by GitHub that allows you to share and store s
 .pull-right[
 
 &lt;div class="info-box"&gt;
-  &lt;i&gt;🦜️️&lt;/i&gt; The gist package provides a set of functions to work with GitHub Gist. It allows you to copy, create, and delete gists via the GitHub API. Moreover, it comes with an R Studio addin - a shiny app - to manage your Gists.
+  &lt;i&gt;🦜️️&lt;/i&gt; The gist package provides a set of functions to work with GitHub Gist. It allows you to copy, create, and delete gists via the GitHub API. Moreover, it comes with an R Studio addin to get access and manage your Gists.
 &lt;/div&gt;
 
 &lt;a href="https://edgar-treischl.github.io/gist/" target="_blank"&gt;&lt;img src="https://edgar-treischl.github.io/gist/logo.png" alt="The ggplot2 package" align="center" style="width: 25%"/&gt;&lt;/a&gt;

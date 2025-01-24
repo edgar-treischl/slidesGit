@@ -196,7 +196,7 @@ class: bottom, center
 
 ---
 
-## 01: Git/GitHub ... What?
+## (01) Git/GitHub ... What?
 
 .left-column[
 <br/>
@@ -234,7 +234,7 @@ class: bottom, center
 
 
 ---
-## 01: Git/GitHub ... What?
+## (01) Git/GitHub ... What?
 
 
 .panelset[
@@ -312,9 +312,31 @@ class: bottom, center
 # .white[`r emoji::emoji("two")` Getting Started] 
 
 
+---
+## (02) Getting Started
+
+### Push and pull `r emoji::emoji("flex")` on a regular basis:
+
+1. Install Git:
+  - Install on your local machine
+  - Introduce *yourself*
+  - Learn some *Git*
+
+2. Connect to GitHub
+  - Create a *Personal Access Token* (PAT)
+  - Create a *Repository*
+
+3. Connect GitHub and R Studio
+  - *Clone* the newly created repository
+  - *Setup R Studio* and connect to GitHub
+  - Get in touch with the R Studio *Git pane*
+
+
+
+
 
 ---
-## 02: Install Git
+## (02) Install Git on your local machine
 
 .left-column[
 <br/>
@@ -352,10 +374,10 @@ background-image: url(https://usethis.r-lib.org/logo.png)
 background-position: 90% 5%
 background-size: 10%
 
-## 02: Introduce Yourself ...
+## (02) Install Git: Introduce yourself
 
 
-### via the shell ...
+### Via the shell
 
 ```bash
 #In the console
@@ -364,7 +386,7 @@ git config --global user.email "email@adress.com"
 
 ```
 
-### with the or `r emoji::emoji("rocket")` usethis package
+### Or with the `r emoji::emoji("rocket")` usethis package
 
 ```{r, eval=FALSE}
 library(usethis)
@@ -374,7 +396,7 @@ use_git_config(user.name = "Jane Doe",
 
 
 ---
-## 02: Introduce Yourself
+## (02) Install Git: Introduce yourself
 
 ### Check global configuration settings
 
@@ -392,12 +414,12 @@ class: bottom, center
 
 
 ---
-## 02: New Vocabulary `r emoji::emoji("sword")` 
+## (02) Install Git: New Vocabulary `r emoji::emoji("sword")`
 
 
 .pull-left[
 
-No but, Git can be scary because it's full of technical jargon*:
+Wait, Git is scary because it's full of technical jargon<sup>1</sup>:
 
 - **Repository**: A folder with all project files
 - **Push**: Send code (files) to Git 
@@ -407,7 +429,9 @@ No but, Git can be scary because it's full of technical jargon*:
 
 ...
 
-* As often, R Studio helps us to work with Git.
+.footnote[
+[1] As often, R Studio helps us to work with Git.
+]
 
 ]
 
@@ -421,7 +445,8 @@ No but, Git can be scary because it's full of technical jargon*:
 
 
 ---
-## 02: New Vocabulary `r emoji::emoji("sword")` 
+## (02) Install Git: New Vocabulary `r emoji::emoji("sword")` 
+
 
 
 .pull-left[
@@ -448,10 +473,9 @@ No but, Git can be scary because it's full of technical jargon*:
 
 
 ---
-## 02: Connect to GitHub
+## (02) Connect to GitHub: Create a PAT
 
-### Create a Personal Access Token (PAT)
-
+### Create a PAT in R Studio:
 
 ```{r, eval=FALSE}
 # The create_github_token() function will open a browser window to create a token
@@ -472,7 +496,7 @@ On the GitHub website, go to:
 
 
 ---
-## 02: Connect to GitHub
+## (02) Connect to GitHub
 
 
 ### Check if R Studio is connected to GitHub:
@@ -485,31 +509,55 @@ gh::gh_whoami()
 #### `r emoji::emoji("congratulations")` ... you're connected!
 
 ---
-## 02: Create a Repository on GitHub
+## (02) Connect to GitHub: Create a repository
 
 <img src="images/Fig_0903.png" style="width: 60%"/>
 
 
 ---
-## 02: Quick Setup
+## (02) Connect to GitHub: Create a repository
+
 <img src="images/Fig_0904.png" style="width: 80%"/>
 
 ---
-## 02: Setup in RStudio
+## (02) Connect GitHub and R Studio
 
-<img src="images/Fig_0905.png" style="width: 50%"/>
+.pull-left[
+
+#### 1. Create a new project in R Studio and click next.
+
+#### 2. Pick Version Control and cick next.
+
+#### 3. Pick Git and click next.
+
+#### 4. Paste the repository URL: `r emoji::emoji("right")`
+
+]
+
+
+
+.pull-right[
+<img src="images/Fig_0905.png" style="width: 100%"/>
+]
+
+
 
 
 ---
-## 02: Git Pane in RStudio I
+## (02) Connect GitHub and R Studio: Git Pane
+
+#### Once R Studio is connected to GitHub, you can work with the Git pane in R Studio:
 
 <img src="images/Fig_0906.png" style="width: 80%"/>
 
 ---
-## 02: Git Pane in RStudio II
+## (02) Connect GitHub and R Studio: Git Pane
 
-<img src="images/Fig_0907.png" style="width: 80%"/>
+<img src="images/Fig_0907.png" style="width: 75%"/>
 
+
+
+### Push and pull and let it all out  `r emoji::emoji("dancing")` directly from R Studio
 
 
 ---
@@ -521,7 +569,7 @@ class: bottom, center
 
 
 ---
-## 03: Basic setup
+## (03) Git basics
 
 ```bash
 # Initialize a new repository
@@ -545,7 +593,7 @@ git checkout <branch-name>
 
 
 ---
-## 03: Daily workflow
+## (03) Git for the daily workflow
 
 .pull-left[
 
@@ -586,7 +634,7 @@ git merge <branch-name>
 
 
 ---
-## 03: Troubleshooting `r emoji::emoji("skull")`
+## (03) Git for troubleshooting `r emoji::emoji("skull")`
 
 .pull-left[
 
@@ -621,7 +669,7 @@ git reset
 
 
 ---
-## 03: Commit history in R Studio
+## (03) Commit history in R Studio
 
 <img src="images/Fig_0908.png" style="width: 80%"/>
 
@@ -657,7 +705,7 @@ class: bottom, center
 
 
 ---
-## 04: Gist
+## (04) Gist
 
 .panelset[
 
@@ -680,7 +728,7 @@ GitHub Gist is a service provided by GitHub that allows you to share and store s
 .pull-right[
 
 <div class="info-box">
-  <i>`r emoji::emoji("parrot")`️️</i> The gist package provides a set of functions to work with GitHub Gist. It allows you to copy, create, and delete gists via the GitHub API. Moreover, it comes with an R Studio addin - a shiny app - to manage your Gists.
+  <i>`r emoji::emoji("parrot")`️️</i> The gist package provides a set of functions to work with GitHub Gist. It allows you to copy, create, and delete gists via the GitHub API. Moreover, it comes with an R Studio addin to get access and manage your Gists.
 </div>
 
 <a href="https://edgar-treischl.github.io/gist/" target="_blank"><img src="https://edgar-treischl.github.io/gist/logo.png" alt="The ggplot2 package" align="center" style="width: 25%"/></a>
