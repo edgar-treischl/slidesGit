@@ -124,7 +124,40 @@ blockquote.info-box {
 }
 
 
+/* Custom class to override background and text color using CSS variables */
 
+
+.segue-red {
+  --background-color: #C51717 !important; /* Red background */
+  --text-color: #ffffff !important; /* White text */
+  --header-color: #ffffff !important; /* White header text */
+}
+
+.segue-red.center {
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.segue-red.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Align the content to the bottom */
+  height: 100%;
+  padding-bottom: 20px; /* Adjust the space from the bottom */
+  text-align: center;
+}
+
+.segue-red.left {
+  text-align: left;
+}
+
+.segue-red.right {
+  text-align: right;
+}
 
 
 

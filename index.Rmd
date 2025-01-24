@@ -69,7 +69,7 @@ meta() %>%
 
 
 ```{r best-features, echo=FALSE}
-#search
+#searc
 #xaringanExtra::use_search(show_icon = TRUE, position = "top-right")
 
 xaringanExtra::use_progress_bar(color = "#023047", location = "top")
@@ -80,14 +80,6 @@ xaringanExtra::use_tile_view()
 #                             input_background = "white",
 #                             input_border = "black",
 #                             match_current_background = "green")
-
-#'<a href="#1">🏠 Introduction to Git(Hub)</a>'
-#'#
-
-# xaringanExtra::use_banner(
-#   top_left = 'Treischl: Introduction to Git(Hub)',
-#   exclude = "title-slide"
-# )
 
 
 xaringanExtra::use_panelset()
@@ -502,11 +494,11 @@ On the GitHub website, go to:
 ### Check if R Studio is connected to GitHub:
 
 ```{r}
-#Finally, whoami will show you who you are on GitHub
+# Actually, whoami will show you who you are on GitHub ...
 gh::gh_whoami()
 ```
 
-#### `r emoji::emoji("congratulations")` ... you're connected!
+#### `r emoji::emoji("celebration")` ... you're connected!
 
 ---
 ## (02) Connect to GitHub: Create a repository
@@ -546,18 +538,36 @@ gh::gh_whoami()
 ---
 ## (02) Connect GitHub and R Studio: Git Pane
 
-#### Once R Studio is connected to GitHub, you can work with the Git pane in R Studio:
+### Once R Studio is connected to GitHub, you can work with the Git pane in R Studio:
 
 <img src="images/Fig_0906.png" style="width: 80%"/>
 
 ---
 ## (02) Connect GitHub and R Studio: Git Pane
 
+### Push, and pull, and let it all out  `r emoji::emoji("dancing")`
+
 <img src="images/Fig_0907.png" style="width: 75%"/>
 
 
 
-### Push and pull and let it all out  `r emoji::emoji("dancing")` directly from R Studio
+---
+background-image: url("images/practice.gif")
+background-size: cover
+class: bottom, center
+
+# .white[Practice Makes Perfect] 
+
+
+---
+## Practice Makes Perfect
+
+### `r emoji::emoji("plus")` Create a new repository on GitHub  
+### `r emoji::emoji("pc")` Clone the repository on your local machine
+### `r emoji::emoji("file")` Add a new repository file
+### `r emoji::emoji("button")` Commit the changes
+### `r emoji::emoji("mail")` Push the changes to the remote repository
+
 
 
 ---
@@ -630,6 +640,48 @@ git merge <branch-name>
 ]
 
 
+---
+## (03) Even more Git? `r emoji::emoji("explode")`
+
+.pull-left[
+
+#### Do I need all the code if I am happy with the Git Pane?
+
+- The Pane simplifies common Git operations, but Git Code gives you more control, flexibility, and the ability to handle complex operations
+
+- **Common example**: Merge conflicts can occur when two branches have changed the same part of a file and Git will not be able to automatically determine what is correct
+
+- Git commands give you a more detailed understanding of where the conflicts are happening. This is particularly useful when the conflict isn't straightforward to resolve.
+
+- Of course, we don't have to remember in detail `r emoji::emoji("wink")`
+
+]
+
+.pull-right[
+
+#### Merge Conflict:
+
+```bash
+# <<<<<<< HEAD
+# print("This is my feature branch.")
+# =======
+# print("This is my master branch.")
+# >>>>>>> master
+
+```
+#### Typical workflow to solve the merge conflict:
+
+- Manually resolve the conflict in the file(s) and run:
+
+```bash
+git add script.R
+git commit -m "Resolved merge conflict"
+```
+
+
+
+]
+
 
 
 
@@ -672,26 +724,6 @@ git reset
 ## (03) Commit history in R Studio
 
 <img src="images/Fig_0908.png" style="width: 80%"/>
-
-
----
-background-image: url("images/practice.gif")
-background-size: cover
-class: bottom, center
-
-# .white[`r emoji::emoji("four")` Practice Makes Perfect] 
-
-
----
-## Practice Makes Perfect
-
-### `r emoji::emoji("plus")` Create a new repository on GitHub  
-### `r emoji::emoji("pc")` Clone the repository on your local machine
-### `r emoji::emoji("file")` Add a new repository file
-### `r emoji::emoji("button")` Commit the changes
-### `r emoji::emoji("mail")` Push the changes to the remote repository
-
-
 
 ---
 background-image: url("images/bite.gif")
