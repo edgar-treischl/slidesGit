@@ -15,9 +15,12 @@ output:
       highlightLines: true
       countIncrementalSlides: false
       titleSlideClass: [center, middle]
+header-includes:
+  - '<link rel="icon" href="images/favicon.ico" type="image/x-icon">'
+  - '<link rel="icon" href="images/favicon.png" type="image/png">'
 ---
 
-background-image: url("images/bg.png")
+background-image: url("images/bg_web.png")
 class: left, middle
 background-size: cover
 
@@ -61,8 +64,12 @@ meta() %>%
     title = "Introduction to Git and GitHub",
     url = "https://edgar-treischl.github.io/Workshop_GitHubIntro/",
     og_type = "website",
-    og_author = "Edgar J. Treischl"
+    og_author = "Edgar J. Treischl",
+    image = "images/allison_horst_web.png",
+    image_alt = "Images from Allison Horst"
   )
+
+
 ```
 
 
@@ -538,7 +545,7 @@ gh::gh_whoami()
 ---
 ## (02) Connect GitHub and R Studio: Git Pane
 
-### Once R Studio is connected to GitHub, you can work with the Git pane in R Studio:
+### Once R Studio is connected, you can work with the Git pane:
 
 <img src="images/Fig_0906.png" style="width: 80%"/>
 
