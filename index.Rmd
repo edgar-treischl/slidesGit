@@ -15,9 +15,6 @@ output:
       highlightLines: true
       countIncrementalSlides: false
       titleSlideClass: [center, middle]
-header-includes:
-  - '<link rel="icon" href="images/favicon.ico" type="image/x-icon">'
-  - '<link rel="icon" href="images/favicon.png" type="image/png">'
 ---
 
 background-image: url("images/bg_web.png")
@@ -65,7 +62,7 @@ meta() %>%
     url = "https://edgar-treischl.github.io/Workshop_GitHubIntro/",
     og_type = "website",
     og_author = "Edgar J. Treischl",
-    image = "images/allison_horst_web.png",
+    image = "https://edgar-treischl.github.io/gist/logo.png",
     image_alt = "Images from Allison Horst"
   )
 
