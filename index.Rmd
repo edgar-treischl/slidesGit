@@ -54,17 +54,16 @@ ui <- "- "
 library(metathis)
 meta() %>%
   meta_general(
-    description = "Git(Hub): A gentle introduction for R Users",
+    description = "Git(Hub): A Gentle Introduction for R Users",
     generator = "xaringan and remark.js"
   ) %>% 
   meta_name("github-repo" = "edgar-treischl/Workshop_GitHubIntro") %>% 
   meta_social(
-    title = "Git(Hub): A gentle introduction for R Users",
+    title = "Git(Hub): A Gentle Introduction for R Users",
     url = "https://edgar-treischl.github.io/Workshop_GitHubIntro/",
     og_type = "website",
     og_author = "Edgar J. Treischl",
-    image = "https://raw.githubusercontent.com/edgar-treischl/Workshop_GitHubIntro/425baba66b3bfdad579b9193d380e50bc3c09bda/images/preview.png
-",
+    image = "https://raw.githubusercontent.com/edgar-treischl/Workshop_GitHubIntro/425baba66b3bfdad579b9193d380e50bc3c09bda/images/preview.png",
     image_alt = "Preview Slide"
   )
 
