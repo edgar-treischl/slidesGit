@@ -63,7 +63,7 @@ meta() %>%
     url = "https://edgar-treischl.github.io/Workshop_GitHubIntro/",
     og_type = "website",
     og_author = "Edgar J. Treischl",
-    image = "https://raw.githubusercontent.com/edgar-treischl/Workshop_GitHubIntro/425baba66b3bfdad579b9193d380e50bc3c09bda/images/preview.png",
+    image = "https://edgar-treischl.github.io/Workshop_GitHubIntro/images/preview.png",
     image_alt = "Preview Slide"
   )
 
