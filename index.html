@@ -5,20 +5,20 @@
     <meta charset="utf-8" />
     <meta name="author" content="Dr. Edgar Treischl" />
     <script src="libs/header-attrs/header-attrs.js"></script>
-    <meta name="description" content="A gentle introduction to Git and GitHub."/>
+    <meta name="description" content="Git(Hub): A gentle introduction for R Users"/>
     <meta name="generator" content="xaringan and remark.js"/>
     <meta name="github-repo" content="edgar-treischl/Workshop_GitHubIntro"/>
-    <meta name="twitter:title" content="Introduction to Git and GitHub"/>
-    <meta name="twitter:description" content="A gentle introduction to Git and GitHub."/>
+    <meta name="twitter:title" content="Git(Hub): A gentle introduction for R Users"/>
+    <meta name="twitter:description" content="Git(Hub): A gentle introduction for R Users"/>
     <meta name="twitter:url" content="https://edgar-treischl.github.io/Workshop_GitHubIntro/"/>
     <meta name="twitter:image" content="https://edgar-treischl.github.io/gist/logo.png"/>
-    <meta name="twitter:image:alt" content="Images from Allison Horst"/>
+    <meta name="twitter:image:alt" content="Preview Slide"/>
     <meta name="twitter:card" content="summary"/>
-    <meta property="og:title" content="Introduction to Git and GitHub"/>
-    <meta property="og:description" content="A gentle introduction to Git and GitHub."/>
+    <meta property="og:title" content="Git(Hub): A gentle introduction for R Users"/>
+    <meta property="og:description" content="Git(Hub): A gentle introduction for R Users"/>
     <meta property="og:url" content="https://edgar-treischl.github.io/Workshop_GitHubIntro/"/>
     <meta property="og:image" content="https://edgar-treischl.github.io/gist/logo.png"/>
-    <meta property="og:image:alt" content="Images from Allison Horst"/>
+    <meta property="og:image:alt" content="Preview Slide"/>
     <meta property="og:type" content="website"/>
     <meta property="og:locale" content="en_US"/>
     <meta property="article:author" content="Edgar J. Treischl"/>
@@ -39,8 +39,9 @@
 
 
 background-image: url("images/bg_web.png")
-class: left, middle
 background-size: cover
+class: left, middle
+
 
 
 
@@ -81,14 +82,16 @@ background-size: cover
 
 &lt;br/&gt;
 
-# .white[Introduction to] 
-# .white[Git(Hub)] 
+# .white[Git(Hub)]
+## .white[A Gentle Introduction]
+## .white[for R Users] 
+
 
 &lt;h3&gt;&lt;a href="http://www.edgar-treischl.de" target="_blank" style="color:#C51717;"&gt;Dr. Edgar J. Treischl&lt;/a&gt;&lt;/h3&gt;
 
 &lt;br/&gt;
 &lt;br/&gt;
-.white[Last update: 2025-01-24]
+.white[Last update: 2025-01-25]
 &lt;br/&gt;
 &lt;br/&gt;
 &lt;h4 style = "color:#ffff; text-align: right;"&gt;Press ⭕ or ➡️&lt;/h4&gt;
@@ -406,7 +409,7 @@ Wait, Git is scary because it's full of technical jargon&lt;sup&gt;1&lt;/sup&gt;
 
 .pull-right[
 &lt;figure&gt;
-    &lt;img src="images/allison_horst.png" style="width: 100%"/&gt;
+    &lt;img src="images/allison_horst_web.png" style="width: 100%"/&gt;
     &lt;figcaption style = "color: darkgray;"&gt;'Artwork by @allison_horst'&lt;/figcaption&gt;
 &lt;/figure&gt;
 ]
@@ -433,7 +436,7 @@ Wait, Git is scary because it's full of technical jargon&lt;sup&gt;1&lt;/sup&gt;
 
 .pull-right[
 &lt;figure&gt;
-    &lt;img src="images/allison_horst.png" style="width: 100%"/&gt;
+    &lt;img src="images/allison_horst_web.png" style="width: 100%"/&gt;
     &lt;figcaption style = "color: darkgray;"&gt;'Artwork by @allison_horst'&lt;/figcaption&gt;
 &lt;/figure&gt;
 ]
@@ -486,7 +489,7 @@ gh::gh_whoami()
 ## }
 ```
 
-#### 🎐 ... you're connected!
+#### 🥳 ... you're connected!
 
 ---
 ## (02) Connect to GitHub: Create a repository
@@ -510,7 +513,7 @@ gh::gh_whoami()
 
 #### 3. Pick Git and click next.
 
-#### 4. Paste the repository URL: 👉
+#### 4. Paste the repository URL: ⤵️
 
 ]
 
@@ -526,14 +529,14 @@ gh::gh_whoami()
 ---
 ## (02) Connect GitHub and R Studio: Git Pane
 
-### Once R Studio is connected, you can work with the Git pane:
+### Once R Studio is connected, search for the Git pane:
 
 &lt;img src="images/Fig_0906.png" style="width: 80%"/&gt;
 
 ---
 ## (02) Connect GitHub and R Studio: Git Pane
 
-### Push, and pull, and let it all out  🕺
+### You gonna stage, commit, push, and let it all out  🕺
 
 &lt;img src="images/Fig_0907.png" style="width: 75%"/&gt;
 
@@ -552,9 +555,9 @@ class: bottom, center
 
 ### ➕ Create a new repository on GitHub  
 ### 💻 Clone the repository on your local machine
-### 📁 Add a new repository file
-### 🈶 Commit the changes
-### 📭 Push the changes to the remote repository
+### 📂 Add a new repository file
+### 🈸 Commit the changes
+### 📫 Push the changes to the remote repository
 
 
 
@@ -608,7 +611,7 @@ git commit -am &lt;commit-message&gt;
 # Push changes to the remote rep
 git push &lt;remote&gt; &lt;branch-name&gt;
 
-#Pull changes from the remote rep
+# Pull changes from the remote rep
 git pull
 
 # Merge two branches
@@ -622,14 +625,14 @@ git merge &lt;branch-name&gt;
 &lt;br/&gt;
 &lt;br/&gt;
 &lt;figure&gt;
-    &lt;img src="images/allison_horstgf.png" style="width: 100%"/&gt;
+    &lt;img src="images/allison_horst_gf.png" style="width: 100%"/&gt;
     &lt;figcaption style = "color: darkgray;"&gt;'Artwork by @allison_horst'&lt;/figcaption&gt;
 &lt;/figure&gt;
 ]
 
 
 ---
-## (03) Even more Git? 🤯
+## (03) Even more Git? 💥
 
 .pull-left[
 
@@ -704,7 +707,13 @@ git reset
 .pull-right[
 &lt;br/&gt;
 &lt;br/&gt;
-&lt;a href="https://git-scm.com/book/de/v2" target="_blank"&gt;&lt;img src="https://git-scm.com/images/progit2.png" alt="Pro Git" width="50%"/&gt;&lt;/a&gt;
+&lt;figure&gt;
+    &lt;a href="https://git-scm.com/book/de/v2" target="_blank"&gt;&lt;img src="https://git-scm.com/images/progit2.png" alt="Pro Git by Chacon and Straub" width="50%"/&gt;&lt;/a&gt;
+    &lt;figcaption style = "color: darkgray;"&gt;'Pro Git by Chacon and Straub'&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+
 ]
 
 

@@ -18,8 +18,9 @@ output:
 ---
 
 background-image: url("images/bg_web.png")
-class: left, middle
 background-size: cover
+class: left, middle
+
 
 
 
@@ -53,17 +54,17 @@ ui <- "- "
 library(metathis)
 meta() %>%
   meta_general(
-    description = "A gentle introduction to Git and GitHub.",
+    description = "Git(Hub): A gentle introduction for R Users",
     generator = "xaringan and remark.js"
   ) %>% 
   meta_name("github-repo" = "edgar-treischl/Workshop_GitHubIntro") %>% 
   meta_social(
-    title = "Introduction to Git and GitHub",
+    title = "Git(Hub): A gentle introduction for R Users",
     url = "https://edgar-treischl.github.io/Workshop_GitHubIntro/",
     og_type = "website",
     og_author = "Edgar J. Treischl",
     image = "https://edgar-treischl.github.io/gist/logo.png",
-    image_alt = "Images from Allison Horst"
+    image_alt = "Preview Slide"
   )
 
 
@@ -127,8 +128,10 @@ cat(readLines("github-corner.html"), sep = "\n")
 
 <br/>
 
-# .white[Introduction to] 
-# .white[Git(Hub)] 
+# .white[Git(Hub)]
+## .white[A Gentle Introduction]
+## .white[for R Users] 
+
 
 <h3><a href="http://www.edgar-treischl.de" target="_blank" style="color:#C51717;">Dr. Edgar J. Treischl</a></h3>
 
@@ -433,7 +436,7 @@ Wait, Git is scary because it's full of technical jargon<sup>1</sup>:
 
 .pull-right[
 <figure>
-    <img src="images/allison_horst.png" style="width: 100%"/>
+    <img src="images/allison_horst_web.png" style="width: 100%"/>
     <figcaption style = "color: darkgray;">'Artwork by @allison_horst'</figcaption>
 </figure>
 ]
@@ -460,7 +463,7 @@ Wait, Git is scary because it's full of technical jargon<sup>1</sup>:
 
 .pull-right[
 <figure>
-    <img src="images/allison_horst.png" style="width: 100%"/>
+    <img src="images/allison_horst_web.png" style="width: 100%"/>
     <figcaption style = "color: darkgray;">'Artwork by @allison_horst'</figcaption>
 </figure>
 ]
@@ -542,14 +545,14 @@ gh::gh_whoami()
 ---
 ## (02) Connect GitHub and R Studio: Git Pane
 
-### Once R Studio is connected, you can work with the Git pane:
+### Once R Studio is connected, search for the Git pane:
 
 <img src="images/Fig_0906.png" style="width: 80%"/>
 
 ---
 ## (02) Connect GitHub and R Studio: Git Pane
 
-### Push, and pull, and let it all out  `r emoji::emoji("dancing")`
+### You gonna stage, commit, push, and let it all out  `r emoji::emoji("dancing")`
 
 <img src="images/Fig_0907.png" style="width: 75%"/>
 
@@ -624,7 +627,7 @@ git commit -am <commit-message>
 # Push changes to the remote rep
 git push <remote> <branch-name>
 
-#Pull changes from the remote rep
+# Pull changes from the remote rep
 git pull
 
 # Merge two branches
@@ -638,7 +641,7 @@ git merge <branch-name>
 <br/>
 <br/>
 <figure>
-    <img src="images/allison_horstgf.png" style="width: 100%"/>
+    <img src="images/allison_horst_gf.png" style="width: 100%"/>
     <figcaption style = "color: darkgray;">'Artwork by @allison_horst'</figcaption>
 </figure>
 ]
@@ -720,7 +723,13 @@ git reset
 .pull-right[
 <br/>
 <br/>
-<a href="https://git-scm.com/book/de/v2" target="_blank"><img src="https://git-scm.com/images/progit2.png" alt="Pro Git" width="50%"/></a>
+<figure>
+    <a href="https://git-scm.com/book/de/v2" target="_blank"><img src="https://git-scm.com/images/progit2.png" alt="Pro Git by Chacon and Straub" width="50%"/></a>
+    <figcaption style = "color: darkgray;">'Pro Git by Chacon and Straub'</figcaption>
+</figure>
+
+
+
 ]
 
 
