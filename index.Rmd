@@ -1,7 +1,6 @@
 ---
 title: "Git(Hub) Introduction"
 author: "Dr. Edgar Treischl"
-#institute: "RStudio, PBC"
 date: "Last update: `r Sys.Date()`"
 output:
   xaringan::moon_reader:
@@ -57,13 +56,13 @@ meta() %>%
     description = "Git(Hub): A Gentle Introduction for R Users",
     generator = "xaringan and remark.js"
   ) %>% 
-  meta_name("github-repo" = "edgar-treischl/Workshop_GitHubIntro") %>% 
+  meta_name("github-repo" = "edgar-treischl/slidesGit") %>% 
   meta_social(
     title = "Git(Hub): A Gentle Introduction for R Users",
-    url = "https://edgar-treischl.github.io/Workshop_GitHubIntro/",
+    url = "https://github.com/edgar-treischl/slidesGit",
     og_type = "website",
     og_author = "Edgar J. Treischl",
-    image = "https://edgar-treischl.github.io/Workshop_GitHubIntro/images/preview.png",
+    image = "https://edgar-treischl.github.io/slidesGit/images/preview.png",
     image_alt = "Preview Slide"
   )
 

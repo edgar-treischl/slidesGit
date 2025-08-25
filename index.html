@@ -7,17 +7,17 @@
     <script src="libs/header-attrs/header-attrs.js"></script>
     <meta name="description" content="Git(Hub): A Gentle Introduction for R Users"/>
     <meta name="generator" content="xaringan and remark.js"/>
-    <meta name="github-repo" content="edgar-treischl/Workshop_GitHubIntro"/>
+    <meta name="github-repo" content="edgar-treischl/slidesGit"/>
     <meta name="twitter:title" content="Git(Hub): A Gentle Introduction for R Users"/>
     <meta name="twitter:description" content="Git(Hub): A Gentle Introduction for R Users"/>
-    <meta name="twitter:url" content="https://edgar-treischl.github.io/Workshop_GitHubIntro/"/>
-    <meta name="twitter:image" content="https://edgar-treischl.github.io/Workshop_GitHubIntro/images/preview.png"/>
+    <meta name="twitter:url" content="https://github.com/edgar-treischl/slidesGit"/>
+    <meta name="twitter:image" content="https://edgar-treischl.github.io/slidesGit/images/preview.png"/>
     <meta name="twitter:image:alt" content="Preview Slide"/>
     <meta name="twitter:card" content="summary"/>
     <meta property="og:title" content="Git(Hub): A Gentle Introduction for R Users"/>
     <meta property="og:description" content="Git(Hub): A Gentle Introduction for R Users"/>
-    <meta property="og:url" content="https://edgar-treischl.github.io/Workshop_GitHubIntro/"/>
-    <meta property="og:image" content="https://edgar-treischl.github.io/Workshop_GitHubIntro/images/preview.png"/>
+    <meta property="og:url" content="https://github.com/edgar-treischl/slidesGit"/>
+    <meta property="og:image" content="https://edgar-treischl.github.io/slidesGit/images/preview.png"/>
     <meta property="og:image:alt" content="Preview Slide"/>
     <meta property="og:type" content="website"/>
     <meta property="og:locale" content="en_US"/>
@@ -91,7 +91,7 @@ class: left, middle
 
 &lt;br/&gt;
 &lt;br/&gt;
-.white[Last update: 2025-01-25]
+.white[Last update: 2025-08-25]
 &lt;br/&gt;
 &lt;br/&gt;
 &lt;h4 style = "color:#ffff; text-align: right;"&gt;Press ⭕ or ➡️&lt;/h4&gt;
@@ -371,9 +371,11 @@ git config --global --list
 ## filter.lfs.smudge=git-lfs smudge -- %f
 ## filter.lfs.process=git-lfs filter-process
 ## filter.lfs.required=true
-## user.name=Edgar Treischl
-## user.email=77931249+edgar-treischl@users.noreply.github.com
+## user.name=edgar.treischl
+## user.email=edgar.treischl@isb.bayern.de
 ## core.excludesfile=~/.gitignore
+## color.ui=auto
+## credential.helper=osxkeychain
 ```
 
 
@@ -484,12 +486,12 @@ gh::gh_whoami()
 ##   "name": "Edgar Treischl",
 ##   "login": "edgar-treischl",
 ##   "html_url": "https://github.com/edgar-treischl",
-##   "scopes": "gist, repo, user, workflow",
-##   "token": "ghp_...Cmqg"
+##   "scopes": "gist, read:org, repo, workflow",
+##   "token": "gho_...P1X2"
 ## }
 ```
 
-#### 🎌 ... you're connected!
+#### 🎁 ... you're connected!
 
 ---
 ## (02) Connect to GitHub: Create a repository
@@ -513,7 +515,7 @@ gh::gh_whoami()
 
 #### 3. Pick Git and click next.
 
-#### 4. Paste the repository URL: ➡️
+#### 4. Paste the repository URL: ↩️
 
 ]
 
@@ -556,8 +558,8 @@ class: bottom, center
 ### ➕ Create a new repository on GitHub  
 ### 💻 Clone the repository on your local machine
 ### 📁 Add a new repository file
-### 🈯 Commit the changes
-### 📭 Push the changes to the remote repository
+### 🔆 Commit the changes
+### 📩 Push the changes to the remote repository
 
 
 
@@ -906,10 +908,10 @@ URL: &lt;a href="https://CRAN.R-project.org/package=devtools"&gt;https://CRAN.R-
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-"ratio": "16:9",
-"highlightStyle": "github",
-"highlightLines": true,
-"countIncrementalSlides": false
+  "ratio": "16:9",
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "countIncrementalSlides": false
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
