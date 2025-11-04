@@ -91,7 +91,7 @@ class: left, middle
 
 &lt;br/&gt;
 &lt;br/&gt;
-.white[Last update: 2025-08-25]
+.white[Last update: 2025-11-04]
 &lt;br/&gt;
 &lt;br/&gt;
 &lt;h4 style = "color:#ffff; text-align: right;"&gt;Press ⭕ or ➡️&lt;/h4&gt;
@@ -118,10 +118,9 @@ class: left, middle
 
 .pull-left[
 
-### 1️⃣ Git/GitHub ... What?
-### 2️⃣ Getting Started
-### 3️⃣ Basics of Git
-### 4️⃣ Gist
+### 1️⃣ Intro Git/GitHub
+### 2️⃣ Getting Started with R Studio
+### 3️⃣ Basics of Git and Workflow
 
 
 
@@ -319,7 +318,7 @@ git --version
 ```
 
 ```
-## git version 2.39.5 (Apple Git-154)
+## git version 2.50.1 (Apple Git-155)
 ```
 
 
@@ -491,7 +490,7 @@ gh::gh_whoami()
 ## }
 ```
 
-#### 🎁 ... you're connected!
+#### 🥳 ... you're connected!
 
 ---
 ## (02) Connect to GitHub: Create a repository
@@ -515,7 +514,7 @@ gh::gh_whoami()
 
 #### 3. Pick Git and click next.
 
-#### 4. Paste the repository URL: ↩️
+#### 4. Paste the repository URL: 👉
 
 ]
 
@@ -558,8 +557,8 @@ class: bottom, center
 ### ➕ Create a new repository on GitHub  
 ### 💻 Clone the repository on your local machine
 ### 📁 Add a new repository file
-### 🔆 Commit the changes
-### 📩 Push the changes to the remote repository
+### 🈵 Commit the changes
+### 💌 Push the changes to the remote repository
 
 
 
@@ -633,6 +632,82 @@ git merge &lt;branch-name&gt;
 ]
 
 
+
+---
+## (03) Feature Branches
+
+Work on new ideas and experiment without worrying about breaking the code or interrupting your teammates’ flow
+
+.pull-left[
+
+```bash
+# Create a new branch and switch to it
+git checkout -b feature/shiny_map
+
+&gt; Switched to a new branch 'feature/shiny_map'
+```
+
+- Push your branch to the shared repository:
+
+```bash
+# Push your branch to the remote repository
+git push origin feature/shiny_map
+```
+
+]
+.pull-right[
+&lt;figure&gt;
+    &lt;a href="https://gist.github.com/bryanbraun/8c93e154a93a08794291df1fcdce6918" target="_blank"&gt;&lt;img src="/images/git_branches.png" alt="Pro Git by Chacon and Straub" width="90%"/&gt;&lt;/a&gt;
+    &lt;figcaption style = "color: darkgray;"&gt;'Source: bryanbraun'&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+
+]
+
+=&gt; Next step: creating a pull (GitHub) or merge (GitLab) request
+
+
+
+---
+## (03) Merge Request
+
+.pull-left[
+
+- MR are key checkpoint for collaboration, feedback, and maintaining high-quality code (Code Review)
+
+- MR description:
+  - A summary of what you changed and why
+  - Mentions of any relevant people using @username
+  - Links to related *issues*, tickets, or discussions
+
+```bash
+# Create a new branch for the MR and push it
+git checkout -b 42-add-shiny-map
+git push origin 42-add-shiny-map
+```
+
+Closing Keyword for *Issues*:
+
+- Closes #42
+- Fixes #42
+- Resolves #42
+
+
+
+]
+.pull-right[
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;figure&gt;
+  &lt;img src="/images/git_merge.gif" alt="Git Merge Meme" width="90%"/&gt;
+&lt;/figure&gt;
+
+
+
+]
+
+
 ---
 ## (03) Even more Git? 💥
 
@@ -671,10 +746,78 @@ git add script.R
 git commit -m "Resolved merge conflict"
 ```
 
+]
+
+
+
+
+
+
+
+---
+## (03) Commit history in R Studio
+
+&lt;img src="images/Fig_0908.png" style="width: 80%"/&gt;
+
+
+
+
+
+---
+## Commit Messages
+
+.pull-left[
+Commit messages help to:
+  - Understand the evolution of the code
+  - Debug effectively
+  - Collaborate with others
+  - Use GitLab issues to track development
+  - Improve CI/CD troubleshooting
+  - Start with a verb in the imperative mood: “Add”, “Fix”, “Modify”, “Delete”
+  - Keep the subject line short and focused (ideally under 50 characters)
+
+- Optional: Include a short body if the change is complex and needs context
+
+An Example:
+
+
+
+]
+.pull-right[
+&lt;br/&gt;
+
+&lt;figure&gt;
+    &lt;a href="https://git-scm.com/book/de/v2" target="_blank"&gt;&lt;img src="/images/allison_horst_comits.png" alt="Pro Git by Chacon and Straub" width="100%"/&gt;&lt;/a&gt;
+    &lt;figcaption style = "color: darkgray;"&gt;'Allison Horst'&lt;/figcaption&gt;
+&lt;/figure&gt;
+
 
 
 ]
 
+```
+#&gt; Fix plot alignment in create_pdf
+#&gt; It prevents overflow when long axis labels are used.
+```
+
+
+
+
+---
+## Commit Messages: Pitfalls
+
+#### *Vague commit messages*: “Fix bug”
+#### *Omitting context for complex changes*: “Refactor function”
+#### *Committing unrelated changes together in one commit*: “Update complex_function and fix bug several data processing steps”
+
+
+
+It’s helpful to integrate changes (1) early, (2) often, and (3) safely.
+
+- (1): Push code as soon as it becomes functional, even if it’s not polished yet. Holding onto work increases the risk of merge conflicts. 
+- (2): Commit changes regularly and keep them small. Frequent, incremental updates are easier to understand and quicker to review.
+
+- (3): Every change that lands on the main branch must be ready for deployment. (pre-commit hooks, linting, and secret detection, integration tests). 
 
 
 
@@ -719,119 +862,11 @@ git reset
 ]
 
 
----
-## (03) Commit history in R Studio
-
-&lt;img src="images/Fig_0908.png" style="width: 80%"/&gt;
-
----
-background-image: url("images/bite.gif")
-background-size: cover
-class: bottom, center
-
-# .black[4️⃣ Gist]
 
 
 
 
 
----
-## (04) Gist
-
-.panelset[
-
-
-.panel[.panel-name[Package]
-
-.pull-left[
-
-GitHub Gist is a service provided by GitHub that allows you to share and store snippets of code, text, or any other kind of file.
-
-- Quick sharing of code (with your future self)
-- Code embedding
-- No need for a full repository
-
-
-
-]
-
-
-.pull-right[
-
-&lt;div class="info-box"&gt;
-  &lt;i&gt;🦜️️&lt;/i&gt; The gist package provides a set of functions to work with GitHub Gist. It allows you to copy, create, and delete gists via the GitHub API. Moreover, it comes with an R Studio addin to get access and manage your Gists.
-&lt;/div&gt;
-
-&lt;a href="https://edgar-treischl.github.io/gist/" target="_blank"&gt;&lt;img src="https://edgar-treischl.github.io/gist/logo.png" alt="The ggplot2 package" align="center" style="width: 25%"/&gt;&lt;/a&gt;
-
-]
-
-
-
-]
-
-.panel[.panel-name[R Studio Addin]
-
-.pull-left[
-
-
-#### R Studio Addin: 
-
-
-``` r
-#You can install the development version via:
-devtools::install_github("edgar-treischl/gist")
-```
-
-
-``` r
-#The gistAddin()
-gist::gistAddin()
-```
-
-
-
-]
-
-.pull-right[
-&lt;img src="https://edgar-treischl.github.io/gist/reference/figures/gistapp.png" style="width: 75%"/&gt;
-]
-
-]
-
-.panel[.panel-name[Via the console]
-
-.pull-left[
-
-
-``` r
-library(gist)
-#Create a gist
-gist_create(name = "A_Test.R", 
-            code = '#Test
-print("Hello world")', 
-            description = "Test Gist")
-```
-
-
-``` r
-#gistfiles lists all files and returns names and ids
-gist_get(filename = "A_Test.R")
-
-#&gt; ✔ Copied A_Test.R from your GitHub account.
-```
-
-
-
-]
-
-.pull-right[
-&lt;a href="https://gist.github.com/edgar-treischl" target="_blank"&gt;&lt;img src="images/gist_screen.png" alt="The ggplot2 package" align="right" style="width: 100%"/&gt;&lt;/a&gt;
-
-]
-]
-
-]
 
 
 
