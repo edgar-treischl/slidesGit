@@ -670,7 +670,7 @@ git push origin feature/shiny_map
 ]
 .pull-right[
 <figure>
-    <a href="https://gist.github.com/bryanbraun/8c93e154a93a08794291df1fcdce6918" target="_blank"><img src="/images/git_branches.png" alt="Pro Git by Chacon and Straub" width="90%"/></a>
+    <a href="https://gist.github.com/bryanbraun/8c93e154a93a08794291df1fcdce6918" target="_blank"><img src="images/git_branches.png" alt="Pro Git by Chacon and Straub" width="90%"/></a>
     <figcaption style = "color: darkgray;">'Source: bryanbraun'</figcaption>
 </figure>
 
@@ -713,7 +713,7 @@ Closing Keyword for *Issues*:
 <br/>
 <br/>
 <figure>
-  <img src="/images/git_merge.gif" alt="Git Merge Meme" width="90%"/>
+  <img src="images/git_merge.gif" alt="Git Merge Meme" width="90%"/>
 </figure>
 
 
@@ -800,7 +800,7 @@ An Example:
 <br/>
 
 <figure>
-    <a href="https://git-scm.com/book/de/v2" target="_blank"><img src="/images/allison_horst_comits.png" alt="Pro Git by Chacon and Straub" width="100%"/></a>
+    <a href="https://allisonhorst.com" target="_blank"><img src="images/allison_horst_comits.png" alt="Pro Git by Chacon and Straub" width="100%"/></a>
     <figcaption style = "color: darkgray;">'Allison Horst'</figcaption>
 </figure>
 
