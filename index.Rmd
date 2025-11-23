@@ -906,6 +906,8 @@ class: right, middle
 
 [`r icons::fontawesome("envelope")` edgar.treischl@isb.bayern.de](mailto:edgar.treischl@isb.bayern.de)
 
+[`r icons::fontawesome("file-pdf")` Slides](https://github.com/edgar-treischl/slidesGit/blob/main/slides_git.pdf)
+
 
 ---
 class: right, middle

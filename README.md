@@ -4,13 +4,15 @@
 # Workshop: Introduction to GitHub
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
-This presentation is designed to introduce the basics of GitHub.
+This slides introduce the basics of Git (Hub).
 
 ## Learning Objectives
 
 - Understand what Git(Hub) is
-- Create a GitHub account
 - Create a new repository
 - How to push and pull changes
+- Git Commands
+- Working together on GitHub
